@@ -1,49 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  margin: 0;
+  padding: 0;
+  animation: backgroundAnimation 20s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .container {
-    max-width: 800px;
-    margin: 50px auto;
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  100% {
+    background-position: 100% 50%;
   }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.left h1 {
+  color: #ff0077;
+  font-family: 'Honk';
+  font-size: 50px;
+}
+
+.right {
+  flex: 2;
+  text-align: center;
+}
+
+.quote-container {
+  margin-top: 30px;
+}
+
+#quote {
+  font-size: 24px;
+  font-style: italic;
+  font-family: cursive;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#quote.visible {
+  opacity: 1;
+}
+
+#author {
+  margin-top: 10px;
   
-  h1 {
-    color: #333;
-  }
-  
-  .quote-container {
-    margin-top: 30px;
-  }
-  
-  #quote {
-    font-size: 24px;
-    font-style: italic;
-  }
-  
-  #author {
-    margin-top: 10px;
-  }
-  
-  #new-quote {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #new-quote:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+#new-quote {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff006f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#new-quote:hover {
+  background-color: #c31f66;
+}
+
+#new-quote.animate {
+  transform: scale(1.1);
+}
