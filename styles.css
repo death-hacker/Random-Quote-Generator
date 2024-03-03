@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  background: linear-gradient(to right, #ffecd2, #ff6148);
   margin: 0;
   padding: 0;
   animation: backgroundAnimation 20s infinite alternate;
