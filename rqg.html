@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +17,12 @@
                 <h1>Random Quote Generator</h1>
             </div>
             <div class="right">
+                <div class="icons">
+                    <button id="read-aloud" title="Read Aloud"><i class="fa fa-volume-up" style="color: #ff006f"></i></button>
+                    <button id="share-quote" title="Share Quote"><i class="fa fa-envelope" style="color: #ff006f"></i></button>
+                </div>
                 <div class="quote-container">
+                    <i class="fa fa-quote-left fa-3x fa-pull-left"></i>
                     <p id="quote"></p>
                     <p id="author"></p>
                     <button id="new-quote">New Quote</button>
